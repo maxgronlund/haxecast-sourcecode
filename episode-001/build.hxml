@@ -1,8 +1,9 @@
 #build file
 -cp src
 
+
 -main Main
--swf bin/output.swf
--swf-header 200:40:30:FF0000
+-swf bin/Output.swf
+-swf-header 200:40:30:ffeeee
 -swf-version 10
 
