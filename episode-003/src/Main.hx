@@ -1,75 +1,64 @@
 package;
 
-import flash.display.Sprite;
 import flash.Lib;
+import flash.display.Sprite;
+import flash.display.Loader;
+
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 import flash.events.Event;
 
-import flash.display.LoaderInfo;
-
- 
-
-
-
-//import flash.events.MouseEvent;
-
 
 class Main extends Sprite
 {
-
 	
-	static function main()
-	{
+	static function main(){
 		new Main();
 	}
 	
-	public function new()
-	{	
-	
+	public function new(){	
 		super();
-		
-		Lib.current.addChild(new HaxeCastsBitmap());
 		loadParams();
-
     }
 
-	private function loadParams():Void
-	{
-		trace('loadParams');
-		// read parameters
+	private function loadParams():Void{
+		
+		// read parameters from html file
 		var params:Dynamic<String> = flash.Lib.current.loaderInfo.parameters;
 		
-//		// pass parameters to models
-//		if(params.authenticity_token != null){
-//			applicationModel.setAuthenticity(params.authenticity_token);
-//		}
-//		if(params._session != null){
-//			applicationModel.setSession(params._session);
-//		}
 		if(params.xml_url != null){
-			
-			var url:String 			= params.xml_url;
+
 			var loader:URLLoader 	= new URLLoader();
-			var url_request 		= new URLRequest(url);
+			var url_request 		= new URLRequest(params.xml_url);
 			
 			loader.addEventListener( Event.COMPLETE , onXmlLoaded);
 			loader.load(url_request);
-			
-			trace(url);
-			
-			
-			
 		}
 	}
 	
-	public function onXmlLoaded(e:Event):Void{
-		trace('bam');
-		trace(e.target.data);
-
-
-
-	}
+	private function onXmlLoaded(e:Event):Void{
 		
+		// convert string to xml
+		var xml:Xml = Xml.parse(e.target.data);
+		read_xml(xml);
+	}
+	
+	private function read_xml(xml:Xml):Void{
+		
+		// parse xml
+		for( images in xml.elementsNamed("images") ) {
+			for( image_url in images.elementsNamed("image_url") ) {
+				load_image(image_url.firstChild().nodeValue);
+			}	
+		}
+	}
+	
+	private function load_image(url:String):Void{
+		
+		var haxe_casts_image:Loader = new Loader();
+        var request:URLRequest 		= new URLRequest(url);
+        haxe_casts_image.load(request);
+        Lib.current.addChild(haxe_casts_image);
+	}	
 }
                    
