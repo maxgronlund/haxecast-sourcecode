@@ -1,0 +1,14 @@
+#build file
+-cp src
+-cp src/interfaces
+
+-cp src/bitmaps
+-main Main
+-swf-lib ../swfmill/resource.swf
+#-swf9 bin/koblo_studio_debug.swf
+-swf9 bin/episode-003.swf
+
+-swf-header 600:600:20:eeeeee
+-swf-version 10
+-debug
+
