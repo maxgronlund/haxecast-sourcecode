@@ -2,13 +2,8 @@
 -cp src
 
 
--cp src/bitmaps
 -main Main
-
-#-swf9 bin/koblo_studio_debug.swf
--swf9 bin/episode-003.swf
-
--swf-header 600:600:20:eeeeee
+-swf bin/Output.swf
+-swf-header 200:40:30:ffeeee
 -swf-version 10
--debug
 

@@ -1,35 +1,29 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>Episode #3</title>
+	<title>Episode #1</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	
-
-	<script type="text/javascript" src="js/swfobject.js" ></script>
-	
+	<script src="js/swfobject.js" type="text/javascript"></script>
 	<script type="text/javascript">
-			var flashvars = {};
-
-			flashvars.xml_url = "images.xml";
-			var params = {
-			};
-			params.menu = "false";
-			params.scale = "noscale";
-			params.allowFullScreen = "true";
-			params.wmode = "window";
-			params.allowScriptAccess = "always";
+		var flashvars = {
+			xml_url: "files/images.xml"
+		};
+		var params = {
+			menu: "false",
+			scale: "noScale",
+			allowFullscreen: "true",
+			allowScriptAccess: "always",
 			bgcolor: "#000"
-			
-			
-			var attributes = {};
-			swfobject.embedSWF("episode-003.swf?xml_url=images.xml", "altContent", "600", "600", "10.0.0", "expressInstall.swf", flashvars, params, attributes);
-			
-		
-		</script>
-	
+		};
+		var attributes = {
+			id:"ouput"
+		};
+		swfobject.embedSWF("output.swf", "altContent", "800", "800", "10.0.0", "expressInstall.swf", flashvars, params, attributes);
+	</script>
 	<style>
 		html, body { height:100%; }
 		body { margin:0; }
@@ -45,5 +39,3 @@
 	</div>
 </body>
 </html>
-
-
