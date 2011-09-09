@@ -1,6 +1,6 @@
 package;
 
-import flash.display.MovieClip;
+import flash.display.Sprite;
 import flash.Lib;
 import flash.display.Loader;
 import flash.net.URLLoader;
@@ -32,9 +32,7 @@ class Main
 	}
 	
 	private function onXmlLoaded(e:Event):Void{
-		
 		var xml:Xml = Xml.parse(e.target.data);
-		
 		parse_xml(xml);
 		
 	}

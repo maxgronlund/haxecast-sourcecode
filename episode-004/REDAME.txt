@@ -1,0 +1,40 @@
+Inthei screen cast we will se how to build build flash files using HaXe and TextMate, 
+I refer to flash files as swf files not to confuse it with the Flash application frome Adobe 
+
+
+
+If HaXe isn't installed on  go to http://haxe.org/ , download and install it.
+Check is HaXe is installed correctly by running this cmd from the terminal 
+
+$ haxe -v 
+
+
+(open firefox)  Setting up TextMate for HaXe
+
+if you don't already got textmate go to http://macromates.com/ download and install TextMate
+
+There is a 30 days trial. 
+
+Next we need to install the haxe2 bundle
+Follow the instroctions on http://haxe.org/com/ide/textmate/haxe2_bundle 
+After downloading the zip file, decompress it and rename the extension to .tmbundle 
+
+Double click it and confirm the installation.
+
+
+Download source code for template
+from https://github.com/maxgronlund/haxecast-sourcecode 
+
+view the file en finder
+uzipp and open the episode-001.tmproj
+
+
+
+Building the swf file
+Select the build file and hit cmd+b
+notice with a path to the created swf file, lets go and test is. 
+
+click on the index.html file and open it in your prefered webbrowser.
+
+
+
