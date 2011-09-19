@@ -1,9 +1,13 @@
 #build file
 -cp src
+-cp src/interfaces
 
-
+-cp src/bitmaps
 -main Main
--swf bin/Output.swf
--swf-header 200:40:30:ffeeee
+-swf-lib ../swfmill/resource.swf
+-swf9 bin/episode-004.swf
+
+-swf-header 500:200:20:aaaaaa
 -swf-version 10
+-debug
 

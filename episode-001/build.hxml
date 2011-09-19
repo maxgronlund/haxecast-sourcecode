@@ -1,7 +1,6 @@
 #build file
 -cp src
 
-
 -main Main
 -swf bin/Output.swf
 -swf-header 200:40:30:ffeeee

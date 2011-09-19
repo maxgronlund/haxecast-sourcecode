@@ -5,7 +5,6 @@
 -cp src/bitmaps
 -main Main
 -swf-lib ../swfmill/resource.swf
-#-swf9 bin/koblo_studio_debug.swf
 -swf9 bin/episode-002.swf
 
 -swf-header 423:56:20:eeeeee

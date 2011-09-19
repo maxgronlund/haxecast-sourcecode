@@ -1,29 +1,24 @@
 package;
 
-import flash.display.MovieClip;
+import flash.display.Sprite;
 import flash.Lib;
 
-class Main
+
+class Main extends Sprite
 {
+	private var mouseHandler:MouseHandler;
 	static function main()
 	{
 		new Main();
 	}
 	
 	public function new()
-	{
-		#if (flash9 || flash10)
-	        haxe.Log.trace = function(v,?pos) { untyped __global__["trace"](pos.className+"#"+pos.methodName+"("+pos.lineNumber+"):",v); }
-	        #elseif flash
-	        haxe.Log.trace = function(v,?pos) { flash.Lib.trace(pos.className+"#"+pos.methodName+"("+pos.lineNumber+"): "+v); }
-	    #end
-	    trace( "YEAH!" );
-	}
+	{	
+		super();
+		mouseHandler = new MouseHandler();
+		mouseHandler.x = 25;
+		mouseHandler.y = 50;
+	 	Lib.current.addChild(mouseHandler);
+    }
 }
-
-
-
-
-
-
-
+                   

@@ -1,12 +1,10 @@
 class Main
 {
-	static function main()
-	{
+	static function main(){
 		new Main();
 	}
 	
-	public function new()
-	{
+	public function new(){
 		trace('Hello HaXe!');
 	}
 }
