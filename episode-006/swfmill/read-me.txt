@@ -1,0 +1,6 @@
+How to build the resource.swf file
+
+cd to swfmill folder containing the resource.xml file (same folder as this file is stored in)
+and run this command from the terminal
+
+$ swfmill simple resource.xml resource.swf
