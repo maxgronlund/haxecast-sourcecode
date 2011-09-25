@@ -5,7 +5,7 @@
 -cp src/bitmaps
 -main Main
 -swf-lib ../swfmill/resource.swf
--swf9 bin/output.swf
+-swf9 bin/episode-002.swf
 
 -swf-header 423:56:20:eeeeee
 -swf-version 10

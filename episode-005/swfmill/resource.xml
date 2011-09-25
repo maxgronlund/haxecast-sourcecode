@@ -3,7 +3,7 @@
 <movie version="9" width="800" height="261" framerate="30"> 
 	<frame> 
 		<library>
-			<bitmap id="DialBitmap" import="library/images/Dial.png" />
+			<bitmap id="DialBitmap" import="library/images/dial.png" />
 		</library> 
 	</frame> 
 </movie>

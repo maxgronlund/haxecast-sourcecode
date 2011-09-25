@@ -1,48 +1,38 @@
-
-
 import flash.display.Sprite;
 import flash.events.Event;
-
 import flash.display.Shape;
 import flash.display.Bitmap;
 
-
 class MultiStateImage extends Sprite
-{ 
+{
 	private var bmp:Bitmap; 
-	private var sizeX:Int;
-	private var sizeY:Int;
+	private var mask_width:Int;
+	private var mask_height:Int;
 	
-    public function new(bmp:Bitmap, sizeX:Int, sizeY:Int) 
-    { 
-        super();
-		this.bmp = bmp;
-		super();
-		this.bmp = bmp;
-		this.sizeX = sizeX;
-		this.sizeY = sizeY;
-		addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-
-    } 
-
-	public function onAddedToStage(e:Event)
+	public function new(bmp:Bitmap, mask_width:Int, mask_height:Int)
 	{
-		addChild(bmp);
-		
-		var mask:Shape  = new Shape();
-		mask.graphics.beginFill ( 0x9900FF );
-		mask.graphics.drawRect ( bmp.x, bmp.y, bmp.x+ sizeX, bmp.y+ sizeY);
-		mask.graphics.endFill();
-		addChild(mask);
-		mask.visible = false;
-		// apply mask
-		bmp.mask = mask;
-
-	}
-
-	public function State(state:Int){
-		
-		bmp.x = -state* sizeX;
+	    super();
+	    this.bmp = bmp;
+	    this.mask_width = mask_width;
+	    this.mask_height = mask_height;
+	    addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);		
 	}
 	
+  public function onAddedToStage(e:Event)
+  {
+    addChild(bmp);
+    var mask:Shape  = new Shape();
+    mask.graphics.beginFill ( 0x9900FF );
+    mask.graphics.drawRect ( 0, 0,mask_width,mask_height);
+    mask.graphics.endFill();
+    addChild(mask);
+    mask.visible = false;
+    // apply mask
+    bmp.mask = mask;
+  }
+
+  public function state(stateX:Int, stateY:Int = 0){	
+    bmp.x = -stateX* mask_width;
+	bmp.y = -stateY* mask_height;
+  }
 }
