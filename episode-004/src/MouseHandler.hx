@@ -44,6 +44,7 @@ class MouseHandler extends Sprite
 		
 		stage.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 		stage.removeEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+		addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 	}
 	
 	private function onMouseMove(e:MouseEvent)

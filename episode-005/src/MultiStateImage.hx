@@ -5,19 +5,19 @@ import flash.display.Bitmap;
 
 class MultiStateImage extends Sprite
 {
-	private var bmp:Bitmap; 
-	private var mask_width:Int;
-	private var mask_height:Int;
-	
-	public function new(bmp:Bitmap, mask_width:Int, mask_height:Int)
-	{
-	    super();
-	    this.bmp = bmp;
-	    this.mask_width = mask_width;
-	    this.mask_height = mask_height;
-	    addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);		
-	}
-	
+  private var bmp:Bitmap; 
+  private var mask_width:Int;
+  private var mask_height:Int;
+  
+  public function new(bmp:Bitmap, mask_width:Int, mask_height:Int)
+  {
+    super();
+    this.bmp = bmp;
+    this.mask_width = mask_width;
+    this.mask_height = mask_height;
+    addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);		
+  }
+  
   public function onAddedToStage(e:Event)
   {
     addChild(bmp);
@@ -30,9 +30,9 @@ class MultiStateImage extends Sprite
     // apply mask
     bmp.mask = mask;
   }
-
+  
   public function state(stateX:Int, stateY:Int = 0){	
     bmp.x = -stateX* mask_width;
-	bmp.y = -stateY* mask_height;
+    bmp.y = -stateY* mask_height;
   }
 }

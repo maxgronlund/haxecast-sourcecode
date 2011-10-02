@@ -1,8 +1,0 @@
-add flash var to index.html file
-
-In the index file add a flash var
-
-var flashvars = { xml_url: "files/images.xml"};
-
-
-
