@@ -1,5 +1,0 @@
-run from terminal
-
-cd ~/Dropbox/Koblo/development/mini-studio/ministudio_haxe/swfmill 
-
-swfmill simple resource.xml resource.swf
