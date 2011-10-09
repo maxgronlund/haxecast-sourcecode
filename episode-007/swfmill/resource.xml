@@ -3,7 +3,15 @@
 <movie version="9" width="800" height="261" framerate="30"> 
 	<frame> 
 		<library>
-			<bitmap id="DialBitmap" import="library/images/knob_med.png" />
+			<bitmap id="MeterBitmap" import="library/images/meter.png" />
+			<bitmap id="SliderHandleBitmap" import="library/images/slider_handle.png" />
+			<bitmap id="SliderBackBitmap" import="library/images/slider_back.png" />
+			<bitmap id="BackdropBitmap" import="library/images/backdrop.png" />
+			<bitmap id="HaxeCastsBitmap" import="library/images/haxecasts.png" />
+			<bitmap id="HaxeMusicBitmap" import="library/images/haxemusic.png" />
+			
+			
+			
 		</library> 
 	</frame> 
 </movie>

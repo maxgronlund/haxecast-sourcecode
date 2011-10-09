@@ -1,11 +1,7 @@
-
-
 import flash.display.Sprite;
 import flash.events.Event;
-
 import flash.display.Shape;
 import flash.display.Bitmap;
-
 
 class MultiStateImage extends Sprite
 { 
@@ -13,8 +9,7 @@ class MultiStateImage extends Sprite
   private var sizeX:Int;
   private var sizeY:Int;
   
-  public function new(bmp:Bitmap, sizeX:Int, sizeY:Int):Void
-  { 
+  public function new(bmp:Bitmap, sizeX:Int, sizeY:Int):Void{ 
     super();
     this.bmp = bmp;
     this.sizeX = sizeX;
@@ -22,8 +17,7 @@ class MultiStateImage extends Sprite
     addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
   } 
   
-  public function onAddedToStage(e:Event)
-  {
+  public function onAddedToStage(e:Event){
     addChild(bmp);
     var mask:Shape  = new Shape();
     mask.graphics.beginFill ( 0x9900FF );
@@ -31,7 +25,6 @@ class MultiStateImage extends Sprite
     mask.graphics.endFill();
     addChild(mask);
     mask.visible = false;
-    // apply mask
     bmp.mask = mask;
   }
   

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+	
+<movie version="9" width="800" height="261" framerate="30"> 
+	<frame> 
+		<library>
+			<bitmap id="DialBitmap" import="library/images/knob_med.png" />
+		</library> 
+	</frame> 
+</movie>

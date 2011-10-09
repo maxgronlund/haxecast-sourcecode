@@ -5,22 +5,16 @@ import flash.events.MouseEvent;
 class Dial extends MouseHandler
 {
   private var multiStateImage:MultiStateImage;
-
-
   private var mouseRange:Float;
   private var imageFrames:Float;
   private var ratio:Float;
-
   private var hitPoint:Float;
   private var startPos:Float;
   private var endPos:Float;
-
   private var lastVal:Float;
   private var update:Dynamic;
-
-  
-  public function new(update:Dynamic = null)
-  {
+ 
+  public function new(update:Dynamic = null){
     super();
     this.update = update;
     multiStateImage = new MultiStateImage(new DialBitmap(), 49 ,46);
@@ -39,15 +33,13 @@ class Dial extends MouseHandler
 
   }
   
-  override private function onMouseDown(e:MouseEvent)
-  {	
+  override private function onMouseDown(e:MouseEvent){	
     super.onMouseDown(e); 
     hitPoint = e.stageY;
     startPos = endPos;
   }
 
-  override private function onMouseUp(e:MouseEvent)
-  {	
+  override private function onMouseUp(e:MouseEvent){	
     super.onMouseUp(e); 
     if(endPos <0) endPos = 0;
     else if(endPos > mouseRange) endPos = mouseRange;
@@ -69,14 +61,11 @@ class Dial extends MouseHandler
   }
 
   public function setPos(pos:Float):Void{ 
-
     if (pos < 0 ) pos = 0;
     else if(pos > 1) pos = 1;
     
     lastVal = pos * imageFrames;
-
     endPos = lastVal/ratio;
     multiStateImage.state(0, Std.int(lastVal) ); 
   }
-
 }

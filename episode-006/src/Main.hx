@@ -6,8 +6,6 @@ import flash.Lib;
 
 class Main extends Sprite
 {
-
-
   private var dial:Dial;
   
   static function main()
