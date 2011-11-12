@@ -1,6 +1,6 @@
 #build file
 -cp src
--cp src/interfaces
+-cp src/lib
 
 -cp src/bitmaps
 -main Main

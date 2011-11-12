@@ -13,21 +13,17 @@ class Slider extends MouseHandler
   private var update:Dynamic;
 
   private var mouseRange:Float;
-//  private var imageFrames:Float;
   private var ratio:Float;
 
   
-  public function new(update:Dynamic = null)
-  {
+  public function new(update:Dynamic = null){
     super();
     this.update = update;
- //   multiStateImage = new MultiStateImage(new DialBitmap(), 49 ,46);
     sliderBackBitmap = new SliderBackBitmap();
     sliderHandleBitmap = new SliderHandleBitmap();
     addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 
     mouseRange = 117;
-
     endPos = 0;
     startPos = 0;
 	
@@ -39,18 +35,15 @@ class Slider extends MouseHandler
 	sliderBackBitmap.y = 9;
 	setPos(0.5);
 
-
   }
   
-  override private function onMouseDown(e:MouseEvent)
-  {	
+  override private function onMouseDown(e:MouseEvent){	
     super.onMouseDown(e); 
     hitPoint = e.stageY;
     startPos = endPos;
   }
 
-  override private function onMouseUp(e:MouseEvent)
-  {	
+  override private function onMouseUp(e:MouseEvent){	
     super.onMouseUp(e); 
     if(endPos <0) endPos = 0;
     else if(endPos > mouseRange) endPos = mouseRange;
@@ -73,11 +66,9 @@ class Slider extends MouseHandler
   }
 
   public function setPos(pos:Float):Void{ 
-
     if (pos < 0 ) pos = 0;
     else if(pos > 1) pos = 1;
 
-    
     pos = 1-pos;
     endPos = pos * mouseRange;
     

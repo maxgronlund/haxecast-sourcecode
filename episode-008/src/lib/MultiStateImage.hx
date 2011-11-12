@@ -1,8 +1,5 @@
-
-
 import flash.display.Sprite;
 import flash.events.Event;
-
 import flash.display.Shape;
 import flash.display.Bitmap;
 
@@ -37,6 +34,6 @@ class MultiStateImage extends Sprite
   
   public function state(stateX:Int, stateY:Int = 0){	
     bmp.x = -stateX* sizeX;
-	bmp.y = -stateY* sizeY;
+    bmp.y = -stateY* sizeY;
   }
 }

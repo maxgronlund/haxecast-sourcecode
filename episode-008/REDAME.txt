@@ -1,12 +1,49 @@
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+* *******************************************************************
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*  
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*  
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*  
+* *******************************************************************
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+In this episode demonstrates the MVC design pattern.
+The whole idea with the MVC is to make resilient code easy to maintain and update.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This will be a short simplified and practical introduction. If you want to read more about the MVS pattern there is a nice article on wikipedia http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+
+A lot of the code in this episode is reused from episode 006 an 007 so I will not walk true it again.
+
+The MVC Tirade assign different responsibilities to the three class types
+
+The Views:
+Is responsible for input and output to and from the application, this includes the keyboard, mouse, audio, external devises and of course the interface on the screen. The view can have limited logic but only related to itself.
+
+The Controller:
+Is responsible for the application logic
+
+The Model:
+Holds the applications state and data
+
+
+The relation between the MVC classes is formalized. 
+1: Models don't know about controllers and views. 
+2: Views know about models and controllers.
+3: Controllers controllers know about models.
+
+The communication between the MVC classes is conducted in a specific way.
+1: When the user interact with a view the view call a function in the controller.
+2: The controller does some calculations and call the model.
+3: The model updated it's state and dispatch and event.
+4: Views subscribing to the event receive it and update them self.
+
+
+The initialization sequence matters. 
+
