@@ -1,43 +1,35 @@
-package;
-
-import flash.display.Sprite;
 import flash.Lib;
+import flash.events.Event;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.events.Event;
 
-
-class Main extends Sprite
+class Main
 {
-
-
-//  private var dial:Dial;
-  private var radioModel:RadioModel;
-  private var radioController:RadioController;
-  private var dial1:RadioView;
-  private var dial2:RadioView;
-
+  private var rightSidebar:Bitmap;
+  private var rightSidebarData:BitmapData;
   
-  static function main()
-  {
+  static function main(){
     new Main();
   }
+
+  public function new(){
+    trace('Hello HaXe!');
+    rightSidebarData 	= new BitmapData(100,30,false,0x000000 );
+    rightSidebar		= new Bitmap(rightSidebarData);
+    Lib.current.addChild(rightSidebar);
+    updateSize(Lib.current.stage.stageWidth,Lib.current.stage.stageHeight);
+    Lib.current.stage.addEventListener(Event.RESIZE, resizeHandler);
+  }
   
-  public function new()
-  {	
-    super();
-    radioModel = new RadioModel();
-    radioController = new RadioController(radioModel);
-    dial1 = new RadioView(radioModel,radioController, 'dial1');
-    dial2 = new RadioView(radioModel,radioController, 'dial2');
-
-
-    Lib.current.addChild(dial1);
-	dial1.x = 100;
-	
-    Lib.current.addChild(dial2);
-    dial2.x = 200;
-
-
+  function resizeHandler(e:Event):Void{
+    updateSize(Lib.current.stage.stageWidth,Lib.current.stage.stageHeight);
   }
 
-
+  private function updateSize(sizeX:Float,sizeY:Float):Void
+  {
+    rightSidebar.x = Lib.current.stage.stageWidth - rightSidebar.width;
+    rightSidebar.height = Lib.current.stage.stageHeight;
+  }
 }
-                   
+
