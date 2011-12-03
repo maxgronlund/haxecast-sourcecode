@@ -1,0 +1,8 @@
+nme test "episode-006.nmml" flash
+nme test "episode-006.nmml" ios -simulator
+nme test "episode-006.nmml" webos
+nme test "episode-006.nmml" android
+nme test "episode-006.nmml" windows
+nme test "episode-006.nmml" mac
+nme test "episode-006.nmml" linux
+nme test "episode-006.nmml" html5

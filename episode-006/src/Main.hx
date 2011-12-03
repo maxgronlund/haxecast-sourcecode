@@ -19,7 +19,7 @@ class Main extends Sprite
     dial = new Dial(update);
     Lib.current.addChild(dial);
     
-    dial.x = 130;
+    dial.x = 250;
     dial.y = 30;
 
 	dial.setPos(0.5);

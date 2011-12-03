@@ -7,7 +7,7 @@
 -swf-lib ../swfmill/resource.swf
 -swf9 bin/dial.swf
 
--swf-header 423:56:20:eeeeee
+-swf-header 340:120:20:eeeeee
 -swf-version 10
 -debug
 

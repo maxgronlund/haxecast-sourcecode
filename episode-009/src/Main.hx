@@ -32,4 +32,3 @@ class Main
     rightSidebar.height = Lib.current.stage.stageHeight;
   }
 }
-

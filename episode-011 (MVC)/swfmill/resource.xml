@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+	
+<movie version="9" width="800" height="261" framerate="30"> 
+	<frame> 
+		<library>
+			<bitmap id="DialBitmap" import="library/images/knob_med.png" />
+			<bitmap id="SliderHandleBitmap" import="library/images/slider_handle.png" />
+			<bitmap id="SliderBackBitmap" import="library/images/slider_back.png" />
+			<bitmap id="PlayButtonBitmap" import="library/images/play_button.png" />
+			
+			
+			
+			
+		</library> 
+	</frame> 
+</movie>
