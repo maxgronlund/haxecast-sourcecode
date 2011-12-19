@@ -49,7 +49,7 @@ class DisplayingABitmap extends Sprite {
 		
 //		dial.x = (stage.stageWidth - dial.width) / 2;
 //		dial.y = (stage.stageHeight - dial.height) / 2;
-		dial.x = 10;
+		dial.x = stage.stageWidth - 50;
 		dial.y = 10;
 		
 	}
