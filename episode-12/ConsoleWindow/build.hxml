@@ -1,0 +1,8 @@
+#build file
+-cp src
+
+-main Main
+-swf bin/console.swf
+-swf-header 900:900:30:0000ff
+-swf-version 10
+

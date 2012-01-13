@@ -73,10 +73,10 @@ class AudioEngine extends AView
 //		audioChannels[2].load('audio-files/track-03.mp3');
 //		audioChannels[3].load('audio-files/track-04.mp3');
 
-		audioChannels[0].load('http://haxecasts.com/audio-files/track-01.mp3');
-		audioChannels[1].load('http://haxecasts.com/audio-files/track-02.mp3');
-		audioChannels[2].load('http://haxecasts.com/audio-files/track-03.mp3');
-		audioChannels[3].load('http://haxecasts.com/audio-files/track-04.mp3');
+		audioChannels[0].load('audio-files/track-01.mp3');
+		audioChannels[1].load('audio-files/track-02.mp3');
+		audioChannels[2].load('audio-files/track-03.mp3');
+		audioChannels[3].load('audio-files/track-04.mp3');
 
 	}
 	

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>Console test</title>
+	<title>Console</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	<meta name="description" content="" />
@@ -16,19 +16,24 @@
 			scale: "noScale",
 			allowFullscreen: "true",
 			allowScriptAccess: "always",
-			bgcolor: "#eeeeee"
+			bgcolor: "#000000"
 		};
 		var attributes = {
 			id:"ouput"
 		};
-		swfobject.embedSWF("output.swf", "altContent", "900", "900", "10.0.0", "expressInstall.swf", flashvars, params, attributes);
+		swfobject.embedSWF("console.swf", "altContent", "100%", "100%", "10.0.0", "expressInstall.swf", flashvars, params, attributes);
 	</script>
 	<style>
 		html, body { height:100%; }
 		body { margin:0; }
+		object { outline:none}
+		#altContent{
+			width: 100%;
+			height: 100%;
+		}
 	</style>
 </head>
-<body>
+<body >
 	<div id="altContent">
 		<h1>output</h1>
 		<p>Alternative content</p>
